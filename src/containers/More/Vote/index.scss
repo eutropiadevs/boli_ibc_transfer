@@ -1,0 +1,50 @@
+@import "../../../assets/scss/style.scss";
+.totol-voting-main-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  .total-voting-power-tooltip-box {
+    align-items: center;
+    @media only screen and (max-width: 400px) {
+      width: 100%;
+    }
+  }
+  .total-voting-container {
+    border: 2px solid rgba($color: $secondary-color, $alpha: 0.5);
+    width: max-content;
+    padding: 5px 20px 5px 20px;
+    border-radius: 20px;
+    margin-right: 0.5rem;
+    .dark-mode & {
+      border: 2px solid rgba($color: $secondary-color, $alpha: 0.3);
+    }
+    .total-veHARBOR {
+      font-size: 0.9rem;
+      letter-spacing: 0.7px;
+      font-weight: 400;
+      .dark-mode & {
+        color: white;
+      }
+      .fill-box {
+        font-weight: 600;
+        font-size: 1rem;
+        .dark-mode & {
+        }
+      }
+    }
+  }
+}
+.vote-text-main-container {
+  .vote-text-container {
+    background: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 5px 10px;
+    .dark-mode & {
+      background: #211d34;
+      border: 1px solid #303950;
+      box-shadow: none;
+    }
+  }
+}
