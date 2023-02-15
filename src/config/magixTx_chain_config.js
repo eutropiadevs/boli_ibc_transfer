@@ -84,4 +84,16 @@ export const chainNetworks = {
         prefix: "persistence",
         coinType: 750,
     },
+    comdex: {
+        chainId: "comdex-1",
+        chainName: "Comdex",
+        rpc: "https://comdex-rpc.polkachu.com",
+        rest: "https://comdex-api.polkachu.com",
+        explorerUrlToTx: "https://www.mintscan.io/persistence/txs/{txHash}",
+        coinDenom: "CMDX",
+        coinMinimalDenom: "ucmdx",
+        coinDecimals: 6,
+        prefix: "comdex",
+        coinType: 118,
+    },
 };

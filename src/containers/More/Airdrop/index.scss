@@ -30,6 +30,8 @@
   // display: grid;
   // grid-template-columns: repeat(3, 1fr);
   // grid-gap: 1rem;
+  display: flex;
+  justify-content: center;
   .col-xl-4 {
     @media screen and (max-width: 1200px) {
       padding-bottom: 20px;
@@ -43,7 +45,8 @@
     height: 100%;
     .dark-mode & {
       background: rgba($black, 0.4);
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      // border: 1px solid rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba($secondary-color, 0.2);
       box-shadow: none;
     }
     &.airdrop-upper-card1 {
@@ -128,9 +131,9 @@
         list-style-type: none;
         padding-left: 0;
         display: grid;
-        grid-template-columns: repeat(8, 1fr);
+        grid-template-columns: repeat(6, 1fr);
         grid-gap: 1.5rem;
-        place-items: flex-end;
+        place-items: center;
         li {
           text-align: center;
           grid-column: span 3;

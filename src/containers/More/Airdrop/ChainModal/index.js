@@ -50,6 +50,7 @@ const ChainModal = ({
   const [txLogin, setTxLogin] = useState(false);
   const [disableTxBtn, setDisableTxBtn] = useState(true)
   const [isOpen, setIsOpen] = useState(false);
+  const [amount, setAmount] = useState();
 
   const defaultOptions = {
     loop: true,
@@ -149,9 +150,9 @@ $HARBOR   $CMST`
     setTxLogin(true);
     let msg = MsgSendTokens(
       userCurrentChainAddress,
-      currentChain?.magicTxAdd,
+      userComdexAddress,
       chainNetworks[currentChain?.networkname],
-      1
+      amount
     );
     signAndBroadcastMagicTransaction(
       {
@@ -189,9 +190,9 @@ $HARBOR   $CMST`
     setUserAddress(userCurrentChainAddress)
   }, [address, userCurrentChainAddress])
 
-  useEffect(() => {
-    setuserComdexAddress(address)
-  }, [address])
+  // useEffect(() => {
+  //   setuserComdexAddress(address)
+  // }, [address])
 
   useEffect(() => {
     if (isModalVisible) {
@@ -234,36 +235,38 @@ $HARBOR   $CMST`
               </div>
               <span>{currentChain?.chainName}</span>
             </div>
-            <div className="mission-complete-btn">
+            {/* <div className="mission-complete-btn">
               <Link to={`./complete-mission/${currentChain?.chainId}`}><Button type="primary" size="small" className="btn-filled">Complete Mission</Button></Link>
-            </div>
+            </div> */}
           </div>
         }
       >
-        <Row className="mb-4">
+        {/* <Row className="mb-4">
           <Col>
             <label>Check Eligibility</label>
             <div className="d-flex">
               <Input onChange={(e) => setUserAddress(e.target.value)} value={userAddress} placeholder={`Enter Your ${currentChain?.chainName} Wallet Address`} /> <Button type="primary" className="btn-filled" loading={loading} onClick={() => checkChainAddressEligibility(userAddress)}>Check</Button>
             </div>
           </Col>
-        </Row>
+        </Row> */}
 
         {
           currentChain?.chainId != 4 && currentChain?.chainId != 5 && currentChain?.chainId != 8 && (
             <Row>
               <Col>
-                <label>Magic Transaction</label>
-                <div className="d-flex">
-                  <Input placeholder={`Enter Your Comdex Wallet Address`} value={userComdexAddress} onChange={(e) => setuserComdexAddress(e.target.value)} />
-                  <Button type="primary" className="btn-filled"
+                <label>Send Tokens</label>
+                <div >
+                  <Input placeholder={`Enter Wallet Address`} value={userComdexAddress} onChange={(e) => setuserComdexAddress(e.target.value)} />
+                  <Input placeholder={`Enter Amount`} value={amount} onChange={(e) => setAmount(e.target.value)} type='number' className="mt-2" />
+                  <Button type="primary" className="btn-filled mt-2 w-100"
                     loading={txLogin}
                     disabled={
-                      disableTxBtn ||
+                      // disableTxBtn ||
+                      !amount ||
                       txLogin
                     }
                     onClick={() => handleClickMagicTx()} >
-                    Transaction
+                    Send
                   </Button>
                 </div>
               </Col>
@@ -272,7 +275,7 @@ $HARBOR   $CMST`
         }
 
 
-        <Row className="mt-4">
+        {/* <Row className="mt-4">
           <Col>
             <label style={{ width: "100%" }}>
               <div className="hr-line">
@@ -287,7 +290,7 @@ $HARBOR   $CMST`
             </div>
             <div className="error-text"><SvgIcon name="info" viewbox="0 0 16.25 16.25" /> Copy the above shown  amount  and send it to the above address. Users need to input their Comdex address in MEMO. Magic Txn settlement can take upto 10-12 Hrs. </div>
           </Col>
-        </Row>
+        </Row> */}
 
       </Modal>
 

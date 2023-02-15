@@ -297,14 +297,14 @@ $HARBOR   $CMST`
 
   return (
     <div className="app-content-wrapper">
-      <Row className="text-right">
+      {/* <Row className="text-right">
         <Col>
           <Link to="/more"><Button type="primary" className="btn-filled px-4">Back</Button></Link>
         </Col>
-      </Row>
+      </Row> */}
       <Row>
         <Col>
-          <div className="time-left-head">
+          {/* <div className="time-left-head">
             <div className="left-text">
               {counterEndTime ? <MyTimer expiryTimestamp={time} text={"AIRDROP ENDS IN: "} />
                 :
@@ -313,9 +313,9 @@ $HARBOR   $CMST`
                 </div>
               }
             </div>
-          </div>
+          </div> */}
           <Row className="airdrop-upper pt-2">
-            <Col xl="4" lg="12">
+            {/* <Col xl="4" lg="12">
               <div className="airdrop-upper-card airdrop-upper-card1">
                 <h2>Airdrop Details </h2>
                 <div className="total-airdrop">
@@ -331,10 +331,10 @@ $HARBOR   $CMST`
                   <h2>{amountConversionWithComma(totalClaimedveHarbor || 0)} <sub>ve</sub><sub className="text-uppercase">harbor</sub></h2>
                 </div>
               </div>
-            </Col>
-            <Col xl="4" lg="6">
+            </Col> */}
+            <Col xl="8" lg="6">
               <div className="airdrop-upper-card airdrop-upper-card2">
-                <h3>Airdrop for Chains with Magic Txn <TooltipIcon text="Users need to perform the Magic Txn for every individual chain listed below to receive there airdrop which will get distributed to their Comdex address." /></h3>
+                <h3>IBC Token Transfer</h3>
                 <ul>
                   {maginTxChain?.map((item) => {
                     return (
@@ -345,12 +345,12 @@ $HARBOR   $CMST`
                     )
                   })}
                 </ul>
-                <div className="text-center mt-auto">
+                {/* <div className="text-center mt-auto">
                   <Button type="primary" className="different-chain-eligibility">Click on different chains to check eligibility and complete missions</Button>
-                </div>
+                </div> */}
               </div>
             </Col>
-            <Col xl="4" lg="6">
+            {/* <Col xl="4" lg="6">
               <div className="airdrop-upper-card airdrop-upper-card3">
                 <h3>Airdrop for below Chains <TooltipIcon text="$Harbor and $veHarbor airdrop has been distributed to users for below chains and pools. Users need to complete missions to claim it." /></h3>
                 <ul>
@@ -611,9 +611,9 @@ $HARBOR   $CMST`
                 </div>
 
               </div>
-            </Col>
+            </Col> */}
           </Row>
-          <Row className="airdrop-bottom">
+          {/* <Row className="airdrop-bottom">
             <Col lg="4">
               <div className="airdrop-bottom-card airdrop-bottom-card1">
                 <h2>Your Airdrop Details <TooltipIcon text="Total Harbor ( Magic Txn + Non Magic Txn chains + LP Pools; Harbor from Magic Txn chains will add here only after completion of magic Txn)" /></h2>
@@ -638,7 +638,7 @@ $HARBOR   $CMST`
                 </div>
               </div>
             </Col>
-          </Row>
+          </Row> */}
         </Col>
       </Row>
     </div>

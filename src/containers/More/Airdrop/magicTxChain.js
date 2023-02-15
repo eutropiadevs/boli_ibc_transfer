@@ -5,6 +5,7 @@ import XPRT_ICON from '../../../assets/images/icons/XPRT.png';
 import INJECTIVE_ICON from '../../../assets/images/icons/INJECTIVE.png';
 import LUNA2_ICON from '../../../assets/images/icons/LUNA2.png';
 import SCRT_ICON from '../../../assets/images/icons/SCRT.png';
+import CMDX_ICON from '../../../assets/images/icons/COMDEX.png';
 
 export const maginTxChain = [
     {
@@ -23,27 +24,35 @@ export const maginTxChain = [
         magicTxAdd: "cro1kjzc3p7p67p7chh2pc7hxkvm0hhmnexsw9djvk",
         coinDecimal: "0.00000001"
     },
+    // {
+    //     chainId: 4,
+    //     chainName: "EVMOS",
+    //     networkname: "evmos",
+    //     icon: EVMOS_ICON,
+    //     magicTxAdd: "evmos1njte06atyns5wtqyapfzcc0m3cpsk5d7h800wc",
+    //     coinDecimal: "0.000000000000000001"
+    // },
+    // {
+    //     chainId: 5,
+    //     chainName: "INJ",
+    //     networkname: "injective",
+    //     icon: INJECTIVE_ICON,
+    //     magicTxAdd: "inj1njte06atyns5wtqyapfzcc0m3cpsk5d7l0f9xg",
+    //     coinDecimal: "0.000000000000000001"
+    // },
+    // {
+    //     chainId: 8,
+    //     chainName: "LUNA",
+    //     networkname: "luna2",
+    //     icon: LUNA2_ICON,
+    //     magicTxAdd: "terra10gu8t09uplerxtpd22x8s9zuve7e2a5ew0mj7g",
+    //     coinDecimal: "0.000001"
+    // },
     {
-        chainId: 4,
-        chainName: "EVMOS",
-        networkname: "evmos",
-        icon: EVMOS_ICON,
-        magicTxAdd: "evmos1njte06atyns5wtqyapfzcc0m3cpsk5d7h800wc",
-        coinDecimal: "0.000000000000000001"
-    },
-    {
-        chainId: 5,
-        chainName: "INJ",
-        networkname: "injective",
-        icon: INJECTIVE_ICON,
-        magicTxAdd: "inj1njte06atyns5wtqyapfzcc0m3cpsk5d7l0f9xg",
-        coinDecimal: "0.000000000000000001"
-    },
-    {
-        chainId: 8,
-        chainName: "LUNA",
-        networkname: "luna2",
-        icon: LUNA2_ICON,
+        chainId: 9,
+        chainName: "Comdex",
+        networkname: "comdex",
+        icon: CMDX_ICON,
         magicTxAdd: "terra10gu8t09uplerxtpd22x8s9zuve7e2a5ew0mj7g",
         coinDecimal: "0.000001"
     },
