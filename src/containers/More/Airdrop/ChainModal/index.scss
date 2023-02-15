@@ -77,7 +77,7 @@
       padding: 0 1rem;
 
       .dark-mode & {
-        background: #1d1c29;
+        background: $background-dark1;
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
         border-radius: 20px;
         border: 0;

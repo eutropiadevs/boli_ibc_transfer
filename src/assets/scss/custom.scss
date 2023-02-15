@@ -26,7 +26,8 @@ body {
   position: relative;
   &.dark-mode {
     // background: $primary-gradient !important;
-    background-color: $background-dark1 !important;
+    // background-color: $background-dark1 !important;
+    background-color: #00123e !important;
     // background-color: #01b5df !important;
     color: $white;
   }
@@ -643,6 +644,13 @@ button {
                   color: white;
                 }
               }
+              .ant-btn.ant-btn-primary.btn-filled {
+                background-color: $background-dark1;
+                border-color: $background-dark1;
+                &:hover {
+                  background-color: $background-dark1;
+                }
+              }
             }
 
             p {
@@ -666,6 +674,7 @@ button {
 
               .dark-mode & {
                 background: $background-dark1;
+                background: #01b5e0;
                 // background: $secondary-color;
                 box-shadow: none;
               }
@@ -684,7 +693,8 @@ button {
               box-shadow: $box-shadow-inner-light;
 
               .dark-mode & {
-                background: $background-dark1;
+                // background: $background-dark1;
+                background: #01b5e0;
                 // background: $secondary-color;
                 box-shadow: none;
               }
