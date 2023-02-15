@@ -18,6 +18,7 @@ const NavTabs = ({ setAccountAddress, lang, setAccountName, onClick }) => {
   const route = location.pathname && location.pathname.split("/")[1];
 
   window.addEventListener("keplr_keystorechange", () => {
+    console.log("changed");
     handleConnectToKeplr();
   });
 

@@ -17,7 +17,8 @@ body {
   font-variant: normal !important;
   font-weight: 300;
   background-color: $background-dark1 !important;
-  background: url("../../assets/images/main_bg.jpg") !important;
+  background: url("../../assets/images/main_bg_1.jpg") !important;
+  // background: url("../../assets/images/main_bg.png") !important;
   background-size: cover !important;
   background-position: center;
   background-repeat: no-repeat;
@@ -26,6 +27,7 @@ body {
   &.dark-mode {
     // background: $primary-gradient !important;
     background-color: $background-dark1 !important;
+    // background-color: #01b5df !important;
     color: $white;
   }
   &::before {
@@ -35,7 +37,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.1);
   }
 }
 
@@ -557,7 +559,7 @@ button {
       table {
         border-collapse: separate;
         border-spacing: 0 0.65em;
-
+        border: none !important;
         .ant-table-thead {
           tr {
             th {
@@ -609,6 +611,7 @@ button {
               border-color: transparent;
               background: none;
               text-align: center;
+              border: none !important;
               &:last-child {
                 text-align: right !important;
               }
@@ -617,6 +620,7 @@ button {
                 text-align: start;
                 .dark-mode & {
                   border-left: 1px solid $border-dark;
+                  border: none !important;
                 }
               }
 
@@ -625,6 +629,7 @@ button {
                 text-align: end;
                 .dark-mode & {
                   border-right: 1px solid $border-dark;
+                  border: none !important;
                 }
               }
 
@@ -661,13 +666,14 @@ button {
 
               .dark-mode & {
                 background: $background-dark1;
+                // background: $secondary-color;
                 box-shadow: none;
               }
               &:hover {
                 box-shadow: $box-shadow-inner-light;
-                background: rgba($secondary-color, 0.3);
+                // background: rgba($secondary-color, 0.3);
                 .dark-mode & {
-                  background: rgba($secondary-color, 0.6);
+                  // background: rgba($secondary-color, 0.6);
                   box-shadow: none;
                 }
               }
@@ -679,14 +685,15 @@ button {
 
               .dark-mode & {
                 background: $background-dark1;
+                // background: $secondary-color;
                 box-shadow: none;
               }
               &:hover {
                 box-shadow: $box-shadow-inner-light-hover;
-                background: rgba($secondary-color, 0.3);
+                // background: rgba($secondary-color, 0.3);
 
                 .dark-mode & {
-                  background: rgba($secondary-color, 0.6);
+                  // background: rgba($secondary-color, 0.6);
                   box-shadow: none;
                 }
               }

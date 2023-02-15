@@ -5,11 +5,11 @@ export const comdex = {
   rest: process.env.REACT_APP_REST,
   explorerUrlToTx: process.env.REACT_APP_EXPLORER_URL_TO_TX,
   walletUrlForStaking: process.env.REACT_APP_COMDEX_STAKING_URL,
-  coinGeckoId:"comdex",
-  coinDenom: "CMDX",
-  coinMinimalDenom: "ucmdx",
+  // coinGeckoId: "",
+  coinDenom: "BOLI",
+  coinMinimalDenom: "uboli",
   coinDecimals: 6,
-  prefix: "comdex",
+  prefix: "boli",
   coinType: 118,
 };
 

@@ -6,24 +6,26 @@ import INJECTIVE_ICON from '../../../assets/images/icons/INJECTIVE.png';
 import LUNA2_ICON from '../../../assets/images/icons/LUNA2.png';
 import SCRT_ICON from '../../../assets/images/icons/SCRT.png';
 import CMDX_ICON from '../../../assets/images/icons/COMDEX.png';
+import BOLI_ICON from '../../../assets/images/icons/BOLI.jpg';
+import PARALLEL_ICON from '../../../assets/images/icons/parallel.png';
 
 export const maginTxChain = [
-    {
-        chainId: 2,
-        chainName: "BLD",
-        networkname: "agoric",
-        icon: AGORIC_ICON,
-        magicTxAdd: "agoric1pcjmd4pp5t4sjvhkz92m5th2vk5w99dgnme840",
-        coinDecimal: "0.000001"
-    },
-    {
-        chainId: 3,
-        chainName: "CRO",
-        networkname: "cronos",
-        icon: CRONOS_ICON,
-        magicTxAdd: "cro1kjzc3p7p67p7chh2pc7hxkvm0hhmnexsw9djvk",
-        coinDecimal: "0.00000001"
-    },
+    // {
+    //     chainId: 2,
+    //     chainName: "BLD",
+    //     networkname: "agoric",
+    //     icon: AGORIC_ICON,
+    //     magicTxAdd: "agoric1pcjmd4pp5t4sjvhkz92m5th2vk5w99dgnme840",
+    //     coinDecimal: "0.000001"
+    // },
+    // {
+    //     chainId: 3,
+    //     chainName: "CRO",
+    //     networkname: "cronos",
+    //     icon: CRONOS_ICON,
+    //     magicTxAdd: "cro1kjzc3p7p67p7chh2pc7hxkvm0hhmnexsw9djvk",
+    //     coinDecimal: "0.00000001"
+    // },
     // {
     //     chainId: 4,
     //     chainName: "EVMOS",
@@ -48,28 +50,60 @@ export const maginTxChain = [
     //     magicTxAdd: "terra10gu8t09uplerxtpd22x8s9zuve7e2a5ew0mj7g",
     //     coinDecimal: "0.000001"
     // },
+    // {
+    //     chainId: 9,
+    //     chainName: "Comdex",
+    //     networkname: "comdex",
+    //     icon: CMDX_ICON,
+    //     magicTxAdd: "terra10gu8t09uplerxtpd22x8s9zuve7e2a5ew0mj7g",
+    //     coinDecimal: "0.000001"
+    // },
+    // {
+    //     chainId: 6,
+    //     chainName: "SCRT",
+    //     networkname: "secret",
+    //     icon: SCRT_ICON,
+    //     magicTxAdd: "secret15uwtpll9evv7xmcmgxszleuuhdvnvm7d39tk6a",
+    //     coinDecimal: "0.000001"
+    // },
+    // {
+    //     chainId: 7,
+    //     chainName: "XPRT",
+    //     networkname: "persistence",
+    //     icon: XPRT_ICON,
+    //     magicTxAdd: "persistence127gn02ey4aep77zhm6sgf7p4wq00hpxlajn4mw",
+    //     coinDecimal: "0.000001"
+    // },
     {
-        chainId: 9,
-        chainName: "Comdex",
-        networkname: "comdex",
-        icon: CMDX_ICON,
-        magicTxAdd: "terra10gu8t09uplerxtpd22x8s9zuve7e2a5ew0mj7g",
-        coinDecimal: "0.000001"
+        chainId: 1,
+        chainName: "BOLI",
+        networkname: "boli",
+        icon: BOLI_ICON,
+        magicTxAdd: "",
+        coinDecimal: ""
     },
     {
-        chainId: 6,
-        chainName: "SCRT",
-        networkname: "secret",
-        icon: SCRT_ICON,
-        magicTxAdd: "secret15uwtpll9evv7xmcmgxszleuuhdvnvm7d39tk6a",
-        coinDecimal: "0.000001"
+        chainId: 2,
+        chainName: "PARALLEL",
+        networkname: "parallel",
+        icon: PARALLEL_ICON,
+        magicTxAdd: "",
+        coinDecimal: ""
     },
     {
-        chainId: 7,
-        chainName: "XPRT",
-        networkname: "persistence",
-        icon: XPRT_ICON,
-        magicTxAdd: "persistence127gn02ey4aep77zhm6sgf7p4wq00hpxlajn4mw",
-        coinDecimal: "0.000001"
+        chainId: 3,
+        chainName: "SIX",
+        networkname: "six",
+        icon: BOLI_ICON,
+        magicTxAdd: "",
+        coinDecimal: ""
+    },
+    {
+        chainId: 10,
+        chainName: "HDC",
+        networkname: "hdc",
+        icon: BOLI_ICON,
+        magicTxAdd: "",
+        coinDecimal: ""
     },
 ]

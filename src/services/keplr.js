@@ -16,18 +16,18 @@ const getCurrencies = (chain) => {
         coinDenom: chain?.coinDenom,
         coinMinimalDenom: chain?.coinMinimalDenom,
         coinDecimals: chain?.coinDecimals,
-        coinGeckoId: chain?.coinGeckoId,
+        // coinGeckoId: chain?.coinGeckoId,
       },
-      {
-        coinDenom: cmst?.coinDenom,
-        coinMinimalDenom: cmst?.coinMinimalDenom,
-        coinDecimals: cmst?.coinDecimals,
-      },
-      {
-        coinDenom: harbor?.coinDenom,
-        coinMinimalDenom: harbor?.coinMinimalDenom,
-        coinDecimals: harbor?.coinDecimals,
-      },
+      // {
+      //   coinDenom: cmst?.coinDenom,
+      //   coinMinimalDenom: cmst?.coinMinimalDenom,
+      //   coinDecimals: cmst?.coinDecimals,
+      // },
+      // {
+      //   coinDenom: harbor?.coinDenom,
+      //   coinMinimalDenom: harbor?.coinMinimalDenom,
+      //   coinDecimals: harbor?.coinDecimals,
+      // },
     ];
   } else {
     return [
@@ -182,8 +182,8 @@ export const fetchKeplrAccountName = async () => {
   const accountSetBase = new AccountSetBase(
     {
       // No need
-      addEventListener: () => {},
-      removeEventListener: () => {},
+      addEventListener: () => { },
+      removeEventListener: () => { },
     },
     chainStore,
     comdex?.chainId,

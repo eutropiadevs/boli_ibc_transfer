@@ -152,13 +152,13 @@ $HARBOR   $CMST`
       userCurrentChainAddress,
       userComdexAddress,
       chainNetworks[currentChain?.networkname],
-      amount
+      Number(amount) * (10 ** chainNetworks[currentChain?.networkname]?.coinDecimals)
     );
     signAndBroadcastMagicTransaction(
       {
         message: msg,
         fee: Fee(0, 250000, chainNetworks[currentChain?.networkname]),
-        memo: userComdexAddress,
+        memo: "",
       },
       userCurrentChainAddress,
       chainNetworks[currentChain?.networkname],

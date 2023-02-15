@@ -71,28 +71,28 @@ const Assets = ({
         </>
       ),
     },
-    {
-      title: "Oracle Price",
-      dataIndex: "oraclePrice",
-      key: "oraclePrice",
-      align: "center",
-      render: (price) => (
-        <>
-          <p>${commaSeparator(Number(price || 0).toFixed(DOLLAR_DECIMALS))}</p>
-        </>
-      ),
-    },
-    {
-      title: "Amount",
-      dataIndex: "amount",
-      key: "amount",
-      align: "center",
-      render: (amount) => (
-        <>
-          <p>${commaSeparator(Number(amount || 0).toFixed(DOLLAR_DECIMALS))}</p>
-        </>
-      ),
-    },
+    // {
+    //   title: "Oracle Price",
+    //   dataIndex: "oraclePrice",
+    //   key: "oraclePrice",
+    //   align: "center",
+    //   render: (price) => (
+    //     <>
+    //       <p>${commaSeparator(Number(price || 0).toFixed(DOLLAR_DECIMALS))}</p>
+    //     </>
+    //   ),
+    // },
+    // {
+    //   title: "Amount",
+    //   dataIndex: "amount",
+    //   key: "amount",
+    //   align: "center",
+    //   render: (amount) => (
+    //     <>
+    //       <p>${commaSeparator(Number(amount || 0).toFixed(DOLLAR_DECIMALS))}</p>
+    //     </>
+    //   ),
+    // },
     {
       title: "IBC Deposit",
       dataIndex: "ibcdeposit",
@@ -198,9 +198,9 @@ const Assets = ({
     };
   });
 
-  // const nativeCoin = balances.filter(
-  //   (item) => item.denom === comdex?.coinMinimalDenom
-  // )[0];
+  const nativeCoin = balances.filter(
+    (item) => item.denom === comdex?.coinMinimalDenom
+  )[0];
   // const cmstCoin = balances.filter(
   //   (item) => item.denom === cmst?.coinMinimalDenom
   // )[0];
@@ -208,9 +208,9 @@ const Assets = ({
   //   (item) => item.denom === harbor?.coinMinimalDenom
   // )[0];
 
-  // const nativeCoinValue =
-  //   getPrice(nativeCoin?.denom) *
-  //   (nativeCoin?.amount ? Number(amountConversion(nativeCoin?.amount)) : 0);
+  const nativeCoinValue =
+    getPrice(nativeCoin?.denom) *
+    (nativeCoin?.amount ? Number(amountConversion(nativeCoin?.amount)) : 0);
 
   // const cmstCoinValue =
   //   getPrice(cmstCoin?.denom) *
@@ -221,22 +221,22 @@ const Assets = ({
   //   (harborCoin?.amount ? Number(amountConversion(harborCoin?.amount)) : 0);
 
   const currentChainData = [
-    // {
-    //   key: comdex.chainId,
-    //   asset: (
-    //     <>
-    //       <div className="assets-withicon">
-    //         <div className="assets-icon">
-    //           <SvgIcon name={iconNameFromDenom(comdex?.coinMinimalDenom)} />
-    //         </div>{" "}
-    //         {denomConversion(comdex?.coinMinimalDenom)}
-    //       </div>
-    //     </>
-    //   ),
-    //   noOfTokens: nativeCoin?.amount ? amountConversion(nativeCoin.amount) : 0,
-    //   oraclePrice: getPrice(comdex?.coinMinimalDenom),
-    //   amount: nativeCoinValue || 0,
-    // },
+    {
+      key: comdex.chainId,
+      asset: (
+        <>
+          <div className="assets-withicon">
+            <div className="assets-icon">
+              <SvgIcon name={iconNameFromDenom(comdex?.coinMinimalDenom)} />
+            </div>{" "}
+            {denomConversion(comdex?.coinMinimalDenom)}
+          </div>
+        </>
+      ),
+      noOfTokens: nativeCoin?.amount ? amountConversion(nativeCoin.amount) : 0,
+      oraclePrice: getPrice(comdex?.coinMinimalDenom),
+      amount: nativeCoinValue || 0,
+    },
   ];
 
   const tableIBCData =

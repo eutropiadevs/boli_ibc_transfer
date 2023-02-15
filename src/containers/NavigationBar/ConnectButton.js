@@ -66,14 +66,14 @@ const ConnectButton = ({
     }
   }, [address, refreshBalance]);
 
-  useEffect(() => {
-    fetchAssets(
-      (DEFAULT_PAGE_NUMBER - 1) * (DEFAULT_PAGE_SIZE * 2),
-      DEFAULT_PAGE_SIZE * 2,
-      true,
-      false
-    );
-  }, []);
+  // useEffect(() => {
+  //   fetchAssets(
+  //     (DEFAULT_PAGE_NUMBER - 1) * (DEFAULT_PAGE_SIZE * 2),
+  //     DEFAULT_PAGE_SIZE * 2,
+  //     true,
+  //     false
+  //   );
+  // }, []);
 
   useEffect(() => {
     fetchMarkets();
@@ -166,6 +166,7 @@ const ConnectButton = ({
     queryAssets(offset, limit, countTotal, reverse, (error, data) => {
       if (error) {
         message.error(error);
+        console.log(error);
         return;
       }
 
