@@ -21,6 +21,7 @@ import variables from "../../utils/variables";
 import Deposit from "./Deposit";
 import "./index.scss";
 import Withdraw from "./Withdraw";
+import logo from '../../assets/images/icons/BOLI.jpg'
 
 const Assets = ({
   lang,
@@ -227,7 +228,8 @@ const Assets = ({
         <>
           <div className="assets-withicon">
             <div className="assets-icon">
-              <SvgIcon name={iconNameFromDenom(comdex?.coinMinimalDenom)} />
+              {/* <SvgIcon name={iconNameFromDenom(comdex?.coinMinimalDenom)} /> */}
+              <img src={logo} alt="@logo" />
             </div>{" "}
             {denomConversion(comdex?.coinMinimalDenom)}
           </div>

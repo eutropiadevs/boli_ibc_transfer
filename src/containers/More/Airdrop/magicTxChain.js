@@ -7,7 +7,9 @@ import LUNA2_ICON from '../../../assets/images/icons/LUNA2.png';
 import SCRT_ICON from '../../../assets/images/icons/SCRT.png';
 import CMDX_ICON from '../../../assets/images/icons/COMDEX.png';
 import BOLI_ICON from '../../../assets/images/icons/BOLI.jpg';
-import PARALLEL_ICON from '../../../assets/images/icons/parallel.png';
+import PARALLEL_ICON from '../../../assets/images/icons/prallel.jpg';
+import SIX_ICON from '../../../assets/images/icons/sixChain.jpg';
+import HDC_ICON from '../../../assets/images/icons/hdcjpeg.jpeg';
 
 export const maginTxChain = [
     // {
@@ -94,7 +96,7 @@ export const maginTxChain = [
         chainId: 3,
         chainName: "SIX",
         networkname: "six",
-        icon: BOLI_ICON,
+        icon: SIX_ICON,
         magicTxAdd: "",
         coinDecimal: ""
     },
@@ -102,7 +104,7 @@ export const maginTxChain = [
         chainId: 10,
         chainName: "HDC",
         networkname: "hdc",
-        icon: BOLI_ICON,
+        icon: HDC_ICON,
         magicTxAdd: "",
         coinDecimal: ""
     },
