@@ -1,54 +1,10 @@
 /*
 *
-COMDEX
+Boli
 *                                                           
 */
 @import "./variables.scss";
 
-html,
-body {
-  min-height: 100vh;
-  font-family: $font-family;
-  text-rendering: optimizeLegibility !important;
-  -webkit-font-smoothing: antialiased !important;
-  -moz-font-smoothing: antialiased !important;
-  color: $text-color-dark;
-  font-feature-settings: normal !important;
-  font-variant: normal !important;
-  font-weight: 300;
-  background-color: $background-dark1 !important;
-  background: url("../../assets/images/main_bg_1.jpg") !important;
-  // background: url("../../assets/images/main_bg.png") !important;
-  background-size: cover !important;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: auto !important;
-  position: relative;
-  &.dark-mode {
-    // background: $primary-gradient !important;
-    // background-color: $background-dark1 !important;
-    background-color: #00123e !important;
-    // background-color: #01b5df !important;
-    color: $white;
-  }
-  &::before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.1);
-  }
-}
-
-body.sidebar-open {
-  overflow: hidden;
-}
-label,
-button {
-  user-select: none;
-}
 .icon {
   width: 16px;
   height: auto;
@@ -108,7 +64,7 @@ button {
       max-width: 100%;
       padding: 20px 45px 0;
       margin: 0 auto;
-      width: 70%;
+      width: 100%;
       display: flex;
       flex-direction: column;
       flex: 0 1 100%;
@@ -192,10 +148,6 @@ button {
   height: 36px;
   line-height: 36px;
   font-weight: 300;
-
-  &:not(.ant-btn-round) {
-    border-radius: 0;
-  }
 
   &.ant-btn-primary,
   &.ant-btn-primary-success {
@@ -560,7 +512,7 @@ button {
       table {
         border-collapse: separate;
         border-spacing: 0 0.65em;
-        border: none !important;
+
         .ant-table-thead {
           tr {
             th {
@@ -612,7 +564,6 @@ button {
               border-color: transparent;
               background: none;
               text-align: center;
-              border: none !important;
               &:last-child {
                 text-align: right !important;
               }
@@ -621,7 +572,6 @@ button {
                 text-align: start;
                 .dark-mode & {
                   border-left: 1px solid $border-dark;
-                  border: none !important;
                 }
               }
 
@@ -630,7 +580,6 @@ button {
                 text-align: end;
                 .dark-mode & {
                   border-right: 1px solid $border-dark;
-                  border: none !important;
                 }
               }
 
@@ -642,13 +591,6 @@ button {
                 color: $text-color-light2;
                 .dark-mode & {
                   color: white;
-                }
-              }
-              .ant-btn.ant-btn-primary.btn-filled {
-                background-color: $background-dark1;
-                border-color: $background-dark1;
-                &:hover {
-                  background-color: $background-dark1;
                 }
               }
             }
@@ -674,15 +616,13 @@ button {
 
               .dark-mode & {
                 background: $background-dark1;
-                background: #01b5e0;
-                // background: $secondary-color;
                 box-shadow: none;
               }
               &:hover {
                 box-shadow: $box-shadow-inner-light;
-                // background: rgba($secondary-color, 0.3);
+                background: rgba($secondary-color, 0.3);
                 .dark-mode & {
-                  // background: rgba($secondary-color, 0.6);
+                  background: rgba($secondary-color, 0.6);
                   box-shadow: none;
                 }
               }
@@ -693,17 +633,15 @@ button {
               box-shadow: $box-shadow-inner-light;
 
               .dark-mode & {
-                // background: $background-dark1;
-                background: #01b5e0;
-                // background: $secondary-color;
+                background: $background-dark1;
                 box-shadow: none;
               }
               &:hover {
                 box-shadow: $box-shadow-inner-light-hover;
-                // background: rgba($secondary-color, 0.3);
+                background: rgba($secondary-color, 0.3);
 
                 .dark-mode & {
-                  // background: rgba($secondary-color, 0.6);
+                  background: rgba($secondary-color, 0.6);
                   box-shadow: none;
                 }
               }
@@ -754,23 +692,23 @@ button {
       font-size: 1.3rem;
       font-weight: 300;
 
-      .dark-mode & {
-        color: $white;
-      }
+      // .dark-mode & {
+      color: $white;
+      // }
     }
   }
 
   .ant-modal-content {
     border-radius: 15px;
     padding: 50px 30px;
-    background: $background-light;
-    box-shadow: $box-shadow-inner-light;
-
-    .dark-mode & {
-      background: $background-dark1;
-      box-shadow: $box-shadow-inner-dark;
-      border: 2px solid $border-dark;
-    }
+    // background: $background-light;
+    // box-shadow: $box-shadow-inner-light;
+    color: white;
+    // .dark-mode & {
+    background: $background-dark1;
+    // box-shadow: $box-shadow-inner-dark;
+    border: 2px solid $border-dark;
+    // }
 
     .modal-btn {
       height: 38px;
@@ -803,10 +741,8 @@ button {
         border-radius: 15px;
         border: 0;
 
-        .dark-mode & {
-          background: $background-dark2;
-          color: $white;
-        }
+        background: $background-dark2;
+        color: $white;
       }
     }
   }
@@ -1790,23 +1726,11 @@ button {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #665aa6;
+  background: $secondary-color;
   border-radius: 6px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(#665aa6, 0.8);
-}
-
-.assets-icon {
-  background: $primary-gradient;
-  padding: 1px;
-  width: 38px;
-  height: 38px;
-  img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-  }
 }

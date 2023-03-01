@@ -1,14 +1,14 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import { Provider } from "react-redux";
-import { BrowserRouter } from "react-router-dom";
-import { applyMiddleware, createStore } from "redux";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.scss';
+import App from './App';
+import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from 'react-router-dom';
+import { createStore, applyMiddleware } from 'redux';
 import { composeWithDevTools } from "redux-devtools-extension/developmentOnly";
-import thunk from "redux-thunk";
-import App from "./App";
-import Disclaimer from "./components/common/Disclaimer";
 import reducer from "./reducers";
-import reportWebVitals from "./reportWebVitals";
+import thunk from "redux-thunk";
+import { Provider } from 'react-redux';
 
 const store = createStore(
   reducer,
@@ -17,13 +17,14 @@ const store = createStore(
   })(applyMiddleware(thunk))
 );
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Provider store={store}>
-    <BrowserRouter>
-      <Disclaimer />
-      <App />
-    </BrowserRouter>
+    <React.StrictMode>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </React.StrictMode>
   </Provider>
 );
 

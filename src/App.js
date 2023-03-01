@@ -1,25 +1,22 @@
-import Router from "./Router";
-import NavigationBar from "./containers/NavigationBar";
-import SvgSprite from "./utils/SvgSpriteLoader";
-import svgFile from "./assets/images/svg/svg-sprite.svg";
-import SideBar from "./containers/SideBar";
-import { message } from 'antd';
-import "./App.scss";
-import 'react-loading-skeleton/dist/skeleton.css'
+import logo from './logo.svg';
+import 'antd/dist/reset.css';
+import './App.scss';
+import Navbar from './components/Navbar';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Asssets from './containers/Asset';
+import IbcTransfer from './containers/Ibc Send';
 
-message.config({
-  maxCount: 2,
-});
-
-const App = () => {
+function App() {
   return (
     <>
-      <SvgSprite url={svgFile} />
-      <div className="main_wrapper">
-        {/* <SideBar /> */}
-        <div className="main-container">
-          <NavigationBar />
-          <Router />
+      <Navbar />
+      <div className="app_container">
+        <div className="max_width">
+          <Routes>
+            <Route path="*" element={<Asssets />} />
+            <Route path="/asset" element={<Asssets />} />
+            <Route path="/ibc_transfer" element={<IbcTransfer />} />
+          </Routes>
         </div>
       </div>
     </>
