@@ -6,17 +6,19 @@ import { connect } from "react-redux";
 // import { encode } from "js-base64";
 // import { fetchKeplrAccountName, initializeChain } from "../../services/keplr";
 
-// import {
-//   setAccountAddress,
-//   setAccountName,
-//   showAccountConnectModal,
-// } from "../../actions/account";
+import {
+  setAccountAddress,
+  // setAccountName,
+  // showAccountConnectModal,
+} from "../../actions/account";
 import React, { useState } from "react";
+import { fetchKeplrAccountName, initializeChain } from "../../services/keplr";
+import { encode } from "js-base64";
 // import variables from "../../utils/variables";
 // import ButtonSubmit from "../NavigationBar/Ledger";
 
 const ConnectModal = ({
-  // setAccountAddress,
+  setAccountAddress,
   // setAccountName,
   // lang,
   // showAccountConnectModal,
@@ -34,13 +36,13 @@ const ConnectModal = ({
       }
 
       setAccountAddress(account.address);
-      fetchKeplrAccountName().then((name) => {
-        setAccountName(name);
-      })
+      // fetchKeplrAccountName().then((name) => {
+      //   setAccountName(name);
+      // })
 
       localStorage.setItem("ac", encode(account.address));
       localStorage.setItem("loginType", "keplr")
-      showAccountConnectModal(false);
+      // showAccountConnectModal(false);
     });
   };
 
@@ -51,8 +53,8 @@ const ConnectModal = ({
           <h3 className="text-center">Connect Wallet</h3>
         </div>
         <div className="mb-2 mt-3">
-          {/* <div className="wallet-links" onClick={handleConnectToKeplr}> */}
-          <div className="wallet-links" >
+          <div className="wallet-links" onClick={handleConnectToKeplr}>
+            {/* <div className="wallet-links" > */}
             <span>Keplr Wallet</span>{" "}
           </div>
         </div>
@@ -62,7 +64,7 @@ const ConnectModal = ({
 };
 
 ConnectModal.propTypes = {
-  // setAccountAddress: PropTypes.func.isRequired,
+  setAccountAddress: PropTypes.func.isRequired,
   // setAccountName: PropTypes.func.isRequired,
   // showAccountConnectModal: PropTypes.func.isRequired,
   // lang: PropTypes.string,
@@ -78,7 +80,7 @@ const stateToProps = (state) => {
 
 const actionsToProps = {
   // showAccountConnectModal,
-  // setAccountAddress,
+  setAccountAddress,
   // setAccountName,
 };
 

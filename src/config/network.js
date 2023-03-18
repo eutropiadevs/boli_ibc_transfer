@@ -1,8 +1,8 @@
 export const boli = {
-    chainId: "",
-    chainName: "",
-    rpc: "",
-    rest: "",
+    chainId: "boli-1",
+    chainName: "Boli Hub",
+    rpc: "http://52.194.247.216:26657/",
+    rest: "http://52.194.247.216:1317/",
     explorerUrlToTx: "",
     walletUrlForStaking: "",
     coinGeckoId: "",

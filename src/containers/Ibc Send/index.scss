@@ -1,0 +1,15 @@
+@import "../../assets//scss/style.scss";
+
+.ibc_send_main_container {
+  .ibc_send_container {
+    border: 2px solid $secondary-color;
+    width: 50%;
+    border-radius: 10px;
+    margin: auto;
+    .box_container {
+      display: flex;
+      justify-content: space-around;
+      padding: 10px;
+    }
+  }
+}
