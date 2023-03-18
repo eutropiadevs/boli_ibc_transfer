@@ -1,13 +1,35 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { NavLink } from "react-router-dom";
 import './index.scss';
 import { Button, Dropdown } from 'antd';
 import ConnectModal from "../Modal";
+import { connect } from 'react-redux';
+import * as PropTypes from "prop-types";
+import { setAccountAddress } from '../../actions/account';
+import { decode } from 'js-base64';
 
-const Navbar = () => {
+const Navbar = ({
+    address,
+    setAccountAddress,
+}) => {
+
     let activeStyle = {
         color: "#e94100"
     };
+
+
+    useEffect(() => {
+        const savedAddress = localStorage.getItem("ac");
+        const userAddress = savedAddress ? decode(savedAddress) : address;
+
+        if (userAddress) {
+            setAccountAddress(userAddress);
+
+            //   fetchKeplrAccountName().then((name) => {
+            //     setAccountName(name);
+            //   });
+        }
+    }, [address]);
 
     const WalletConnectedDropdown = <ConnectModal />;
 
@@ -49,8 +71,11 @@ const Navbar = () => {
                                                 placement="bottomRight"
                                                 trigger={["click"]}
                                             >
+
                                                 <Button shape="round" type="primary" className='btn-filled'>
-                                                    Connect Wallet
+                                                    {address ? address :
+                                                        " Connect Wallet"
+                                                    }
                                                 </Button>
                                             </Dropdown>
                                         </div>
@@ -65,4 +90,20 @@ const Navbar = () => {
     )
 }
 
-export default Navbar;
+// export default Navbar;
+Navbar.propTypes = {
+    address: PropTypes.string,
+
+};
+
+const stateToProps = (state) => {
+    return {
+        address: state.account.address,
+    };
+};
+
+const actionsToProps = {
+    setAccountAddress
+};
+
+export default connect(stateToProps, actionsToProps)(Navbar);
